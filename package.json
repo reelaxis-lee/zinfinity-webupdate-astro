@@ -11,8 +11,8 @@
     "start": "node ./dist/server/entry.mjs"
   },
   "dependencies": {
-    "@astrojs/node": "^10.0.4",
     "@astrojs/react": "^5.0.0",
+    "@astrojs/vercel": "^10.0.4",
     "@hookform/resolvers": "^3.10.0",
     "@radix-ui/react-accordion": "^1.2.11",
     "@radix-ui/react-alert-dialog": "^1.1.14",

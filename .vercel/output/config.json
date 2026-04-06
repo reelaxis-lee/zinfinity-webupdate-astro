@@ -1,0 +1,128 @@
+{
+	"version": 3,
+	"routes": [
+		{
+			"handle": "filesystem"
+		},
+		{
+			"src": "^/_astro/(.*)$",
+			"headers": {
+				"cache-control": "public, max-age=31536000, immutable"
+			},
+			"continue": true
+		},
+		{
+			"src": "^/_server-islands/([^/]+?)/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/_image/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/404/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/api/send-form-email/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/contact/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/partners/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/privacy-policy/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/resources/blog/ai-phishing-threat/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/resources/blog/ai-readiness-practical-path/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/resources/blog/beyond-cloud-ai-rebrand/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/resources/blog/big-data-analytics/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/resources/blog/d8taops-partnership/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/resources/blog/dell-data-lakehouse/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/resources/blog/dell-platinum-tier/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/resources/blog/infinidat-rising-star/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/resources/blog/nutanix-enterprise-ai/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/resources/blog/rethinking-ai-agent-craze/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/resources/blog/tech-meets-bbq-baseball/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/resources/blog/toys-for-tots-sponsor/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/resources/blog/zinfinity-crn-2025/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/resources/case-studies/school-district-ups-modernization/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/resources/case-studies/training-center-it-deployment/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/resources/case-studies/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/resources/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/solutions/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/terms/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/.*$",
+			"dest": "_render",
+			"status": 404
+		}
+	]
+}
