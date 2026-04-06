@@ -1,0 +1,71 @@
+---
+import logoColor from "@/assets/zinfinity-logo-color.png";
+
+const pathname = Astro.url.pathname;
+
+const navLinks = [
+  { name: "Home", path: "/" },
+  { name: "Solutions", path: "/solutions" },
+  { name: "Partners", path: "/partners" },
+  { name: "Resources", path: "/resources" },
+  { name: "Contact", path: "/contact" },
+];
+---
+
+<nav class="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md shadow-card">
+  <div class="container mx-auto px-6 md:px-8">
+    <div class="flex items-center justify-between h-24 md:h-28">
+
+      <a href="/" class="flex items-center gap-3 hover:opacity-80 transition-opacity">
+        <img src={logoColor.src} alt="Zinfinity Tech" class="w-auto h-16 md:h-20 max-w-[160px] md:max-w-none object-contain" />
+      </a>
+
+      <div class="hidden md:flex items-center gap-4 lg:gap-8">
+        {navLinks.map(link => (
+          <a
+            href={link.path}
+            class={`text-base lg:text-lg font-medium transition-colors link-underline whitespace-nowrap ${
+              pathname === link.path
+                ? "text-accent"
+                : "text-foreground hover:text-accent"
+            }`}
+          >
+            {link.name}
+          </a>
+        ))}
+        <a
+          href="/contact"
+          class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2"
+        >
+          Talk to Us
+        </a>
+      </div>
+
+      <label for="mobile-nav-toggle" class="md:hidden p-2 cursor-pointer text-foreground hover:text-accent transition-colors" aria-label="Toggle menu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+      </label>
+    </div>
+  </div>
+
+  <input type="checkbox" id="mobile-nav-toggle" class="peer sr-only" />
+  <div class="md:hidden max-h-0 overflow-hidden transition-all duration-300 peer-checked:max-h-screen border-t-0 peer-checked:border-t border-border">
+    <div class="py-6 space-y-4 px-6">
+      {navLinks.map(link => (
+        <a
+          href={link.path}
+          class={`block text-lg font-medium py-2 transition-colors ${
+            pathname === link.path ? "text-accent" : "text-foreground hover:text-accent"
+          }`}
+        >
+          {link.name}
+        </a>
+      ))}
+      <a
+        href="/contact"
+        class="flex items-center justify-center w-full rounded-md text-sm font-medium bg-primary text-primary-foreground hover:bg-primary/90 h-11 px-8"
+      >
+        Get Started
+      </a>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,14 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Navigation from "@/components/Navigation";
+import Home from "@/components/pages/Home";
+import { Toaster } from "@/components/ui/sonner";
+---
+<BaseLayout
+  title="Zinfinity Tech | Peace of Mind. Powered by IT."
+  description="Zinfinity delivers integrated technology solutions for complex, modern environments. AI Readiness, Cloud, Cybersecurity, Infrastructure, and Managed Services."
+>
+  <Navigation client:load />
+  <Home client:load />
+  <Toaster client:load />
+</BaseLayout>

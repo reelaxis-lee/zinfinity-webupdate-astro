@@ -1,0 +1,12 @@
+---
+import ContentLayout from "@/layouts/ContentLayout.astro";
+import Contact from "@/components/pages/Contact";
+import { Toaster } from "@/components/ui/sonner";
+---
+<ContentLayout
+  title="Contact | Zinfinity Tech"
+  description="Get in touch with Zinfinity Tech. Reach our team in Southlake TX, London, Amsterdam, Melbourne, Singapore, or Hong Kong."
+>
+  <Contact client:load />
+  <Toaster client:load />
+</ContentLayout>
