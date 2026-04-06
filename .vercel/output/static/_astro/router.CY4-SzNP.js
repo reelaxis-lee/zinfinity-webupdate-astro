@@ -1,1 +1,0 @@
-import{j as m}from"./jsx-runtime.D9-ZS7W_.js";import{r as o}from"./index.CYEHnncN.js";const p=({to:t,href:a,className:s,children:e,onClick:n,...r})=>m.jsx("a",{href:t??a,className:s,onClick:n,...r,children:e}),u=()=>{const[t,a]=o.useState("/");return o.useEffect(()=>{a(window.location.pathname)},[]),{pathname:t}};export{p as L,u};

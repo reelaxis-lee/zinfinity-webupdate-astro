@@ -10,10 +10,6 @@ export default defineConfig({
   output: "server",
   adapter: vercel(),
   integrations: [react()],
-  server: {
-    host: "0.0.0.0",
-    port: 5000,
-  },
   vite: {
     resolve: {
       alias: {
